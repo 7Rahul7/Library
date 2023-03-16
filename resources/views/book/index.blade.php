@@ -433,7 +433,7 @@
                                             <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
                                                 <!--begin::Form-->
                                                 <form method="post" id="kt_modal_add_user_form" class="form"
-                                                    action="{{ route('student.store') }}">
+                                                    action="{{ route('book.add') }}">
                                                     @csrf
                                                     <!--begin::Scroll-->
                                                     <div class="d-flex flex-column scroll-y me-n7 pe-7"
@@ -444,27 +444,27 @@
                                                         data-kt-scroll-wrappers="#kt_modal_add_user_scroll"
                                                         data-kt-scroll-offset="300px">
                                                         <!--begin::Input group-->
-                                                        <div class="fv-row mb-7">
-                                                            <!--begin::Label-->
-                                                            <label
-                                                                class="required fw-semibold fs-6 mb-2">ID</label>
-                                                            <!--end::Label-->
-                                                            <!--begin::Input-->
-                                                            {{-- to change --}}
-                                                            <input type="text" name="id"
-                                                                class="form-control form-control-solid mb-3 mb-lg-0">
-                                                            <!--end::Input-->
-                                                        </div>
-                                                        <!--end::Input group-->
                                                         <!--begin::Input group-->
                                                         <div class="fv-row mb-7">
                                                             <!--begin::Label-->
-                                                            <label class="required fw-semibold fs-6 mb-2">Name</label>
+                                                            <label class="required fw-semibold fs-6 mb-2">Book Name</label>
                                                             <!--end::Label-->
                                                             <!--begin::Input-->
                                                             <input type="text" name="name"
-                                                                class="form-control form-control-solid mb-3 mb-lg-0"
-                                                                placeholder="name">
+                                                            class="form-control form-control-solid mb-3 mb-lg-0"
+                                                            placeholder="name">
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <!--end::Input group-->
+                                                        <div class="fv-row mb-7">
+                                                            <!--begin::Label-->
+                                                            <label
+                                                                class="required fw-semibold fs-6 mb-2">Author</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            {{-- to change --}}
+                                                            <input type="text" name="Author"
+                                                                class="form-control form-control-solid mb-3 mb-lg-0">
                                                             <!--end::Input-->
                                                         </div>
                                                         <!--end::Input group-->
@@ -495,7 +495,7 @@
                                                                 <label class="required fw-semibold fs-6 mb-2">Isbn no.</label>
                                                                 <!--end::Label-->
                                                                 <!--begin::Input-->
-                                                                <input type="text" name="isbn_number"
+                                                                <input type="text" name="Isbn_number"
                                                                     class="form-control form-control-solid mb-3 mb-lg-0">
                                                                 <!--end::Input-->
 
@@ -579,21 +579,21 @@
                                 <!--begin::Table body-->
                                 <tbody class="text-gray-600 fw-semibold">
                                     <!--begin::Table row-->
-                                    {{-- @foreach($students as $student) --}}
+                                    @foreach($books as $kitab)
                                     <tr>
                                     <td>
                                             <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                 <input class="form-check-input" type="checkbox" value="1" />
                                             </div>
                                         </td>
-                                        {{-- <td>{{$student->id}}</td>
-                                        <td>{{$student->name}}</td>
-                                        <td>{{$student->faculty}}</td>
-                                        <td>{{$student->email}}</td>
-                                        <td>{{$student->phone_number}}</td>
-                                        <td>{{$student->image}}</td>
+                                        <td>{{$kitab->name}}</td>
+                                        <td>{{$kitab->author}}</td>
+                                        <td>{{$kitab->publisher}}</td>
+                                        <td>{{$kitab->distributor}}</td>
+                                        <td>{{$kitab->Isbn_number}}</td>
+                                        <td>{{$kitab->image}}</td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
 
                                 </tbody>
                                 <!--end::Table body-->

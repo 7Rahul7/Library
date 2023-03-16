@@ -35,3 +35,5 @@ Route::post('/student/save', [StudentController::class, 'saveStudent'])->name('s
 Route::get('/book/list',[bookController::class, 'index'])->name('book.index');
 Route::get('/addbook',[bookController::class, 'addBook'])->name('book.addBook');
 
+Route::post('book/formdata',[bookController::class,'formdata'])->name('book.add');
+

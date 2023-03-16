@@ -19,6 +19,7 @@ class bookcontroller extends Controller
     //
      public function index()
     {
+        $books= DB::table('books')->get();
         return view ('book.index');
     }
 
@@ -36,6 +37,7 @@ class bookcontroller extends Controller
             'publisher'=>'required',
             'distributor'=>'required',
             'Isbn_number'=>'required',
+            'img'=>'required',
 
         ]);
         Book::create([
@@ -43,7 +45,7 @@ class bookcontroller extends Controller
             'author'=>$req -> author,
             'publisher'=>$req -> publisher,
             'distributor'=>$req -> distributor,
-            'Isbn_number'=>$req -> isbn_no,
+            'Isbn_number'=>$req -> Isbn_number,
             'img'=>$req -> img,
             ]);
 

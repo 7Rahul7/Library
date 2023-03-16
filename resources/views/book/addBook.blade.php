@@ -38,7 +38,7 @@
                                 <!--begin::Col-->
                                 <div class="col-md-12 pe-lg-10">
                                     <!--begin::Form-->
-                                    <form action="{{ route('student.store') }}" class="form mb-15" method="post"
+                                    <form action="{{ route('book.add') }}" class="form mb-15" method="post"
                                         id="kt_contact_form">
                                         @if ($errors->any())
                                             <div class="alert alert-danger">
@@ -101,7 +101,7 @@
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" class="form-control form-control-solid"
-                                                    name="isbn_number" />
+                                                    name="Isbn_number" />
                                                 <!--end::Input-->
                                             </div>
                                             <div class="col-md-6 fv-row">
