@@ -57,6 +57,6 @@ class StudentController extends Controller
     // function index(){
     //     $id = DB::table('student_list')->get();
 
-    //     
+    //
     // }
 }
