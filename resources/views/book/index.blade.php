@@ -15,150 +15,28 @@
                     <!--begin::Page title-->
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
-                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Users
+                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Book
                             List</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="../../../index-2.html" class="text-muted text-hover-primary">Home</a>
+                                <a href="{{route('dashboard')}}" class="text-muted text-hover-primary">Home</a>
                             </li>
                             <!--end::Item-->
+
                             <!--begin::Item-->
-                            <li class="breadcrumb-item">
-                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                            </li>
+
                             <!--end::Item-->
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">User Management</li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item">
-                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">Users</li>
+                            <li class="breadcrumb-item text-muted">- Books</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
                     </div>
                     <!--end::Page title-->
-                    <!--begin::Actions-->
-                    <div class="d-flex align-items-center gap-2 gap-lg-3">
-                        <!--begin::Filter menu-->
-                        <div class="m-0">
-                            <!--begin::Menu toggle-->
-                            <a href="#"
-                                class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold"
-                                data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                                <span class="svg-icon svg-icon-6 svg-icon-muted me-1">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->Filter
-                            </a>
-                            <!--end::Menu toggle-->
-                            <!--begin::Menu 1-->
-                            <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true"
-                                id="kt_menu_638dcba929143">
-                                <!--begin::Header-->
-                                <div class="px-7 py-5">
-                                    <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                                </div>
-                                <!--end::Header-->
-                                <!--begin::Menu separator-->
-                                <div class="separator border-gray-200"></div>
-                                <!--end::Menu separator-->
-                                <!--begin::Form-->
-                                <div class="px-7 py-5">
-                                    <!--begin::Input group-->
-                                    <div class="mb-10">
-                                        <!--begin::Label-->
-                                        <label class="form-label fw-semibold">Status:</label>
-                                        <!--end::Label-->
-                                        <!--begin::Input-->
-                                        <div>
-                                            <select class="form-select form-select-solid" data-kt-select2="true"
-                                                data-placeholder="Select option"
-                                                data-dropdown-parent="#kt_menu_638dcba929143" data-allow-clear="true">
-                                                <option></option>
-                                                <option value="1">Approved</option>
-                                                <option value="2">Pending</option>
-                                                <option value="2">In Process</option>
-                                                <option value="2">Rejected</option>
-                                            </select>
-                                        </div>
-                                        <!--end::Input-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="mb-10">
-                                        <!--begin::Label-->
-                                        <label class="form-label fw-semibold">Member Type:</label>
-                                        <!--end::Label-->
-                                        <!--begin::Options-->
-                                        <div class="d-flex">
-                                            <!--begin::Options-->
-                                            <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                                                <input class="form-check-input" type="checkbox" value="1" />
-                                                <span class="form-check-label">Author</span>
-                                            </label>
-                                            <!--end::Options-->
-                                            <!--begin::Options-->
-                                            <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="2"
-                                                    checked="checked" />
-                                                <span class="form-check-label">Customer</span>
-                                            </label>
-                                            <!--end::Options-->
-                                        </div>
-                                        <!--end::Options-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="mb-10">
-                                        <!--begin::Label-->
-                                        <label class="form-label fw-semibold">Notifications:</label>
-                                        <!--end::Label-->
-                                        <!--begin::Switch-->
-                                        <div
-                                            class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                name="notifications" checked="checked" />
-                                            <label class="form-check-label">Enabled</label>
-                                        </div>
-                                        <!--end::Switch-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Actions-->
-                                    <div class="d-flex justify-content-end">
-                                        <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2"
-                                            data-kt-menu-dismiss="true">Reset</button>
-                                        <button type="submit" class="btn btn-sm btn-primary"
-                                            data-kt-menu-dismiss="true">Apply</button>
-                                    </div>
-                                    <!--end::Actions-->
-                                </div>
-                                <!--end::Form-->
-                            </div>
-                            <!--end::Menu 1-->
-                        </div>
-                        <!--end::Filter menu-->
-                        <!--begin::Secondary button-->
-                        <!--end::Secondary button-->
-                        <!--begin::Primary button-->
-                        <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#kt_modal_create_app">Create</a>
-                        <!--end::Primary button-->
-                    </div>
-                    <!--end::Actions-->
+
                 </div>
                 <!--end::Toolbar container-->
             </div>
@@ -189,7 +67,7 @@
                                     </span>
                                     <!--end::Svg Icon-->
                                     <input type="text" data-kt-user-table-filter="search"
-                                        class="form-control form-control-solid w-250px ps-14" placeholder="Search user" />
+                                        class="form-control form-control-solid w-250px ps-14" placeholder="Search" />
                                 </div>
                                 <!--end::Search-->
                             </div>
@@ -198,66 +76,9 @@
                             <div class="card-toolbar">
                                 <!--begin::Toolbar-->
                                 <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
-                                    <!--begin::Filter-->
-                                    <button type="button" class="btn btn-light-primary me-3"
-                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                        <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                                        <span class="svg-icon svg-icon-2">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z"
-                                                    fill="currentColor" />
-                                            </svg>
-                                        </span>
-                                        <!--end::Svg Icon-->Filter
-                                    </button>
-                                    <!--begin::Menu 1-->
-                                    <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
-                                        <!--begin::Header-->
-                                        <div class="px-7 py-5">
-                                            <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                                        </div>
-                                        <!--end::Header-->
-                                        <!--begin::Separator-->
-                                        <div class="separator border-gray-200"></div>
-                                        <!--end::Separator-->
-                                        <!--begin::Content-->
-                                        <div class="px-7 py-5" data-kt-user-table-filter="form">
-                                            <!--begin::Input group-->
-                                            <div class="mb-10">
-                                                <label class="form-label fs-6 fw-semibold">Faculty:</label>
-                                                <select class="form-select form-select-solid fw-bold"
-                                                    data-kt-select2="true" data-placeholder="Select option"
-                                                    data-allow-clear="true" data-kt-user-table-filter="faculty"
-                                                    data-hide-search="true">
-                                                    <option></option>
-                                                    <option value="BCS">BCS</option>
-                                                    <option value="BBA">BBA</option>
-                                                    <option value="BHM">BHM</option>
-                                                    <option value="BHIM">BHIM</option>
-                                                    <option value="MCS">MCS</option>
-                                                    <option value="MBA">MBA</option>
-                                                </select>
-                                            </div>
-                                            <!--end::Input group-->
 
-                                            <!--begin::Actions-->
-                                            <div class="d-flex justify-content-end">
-                                                <button type="reset"
-                                                    class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6"
-                                                    data-kt-menu-dismiss="true"
-                                                    data-kt-user-table-filter="reset">Reset</button>
-                                                <button type="submit" class="btn btn-primary fw-semibold px-6"
-                                                    data-kt-menu-dismiss="true"
-                                                    data-kt-user-table-filter="filter">Apply</button>
-                                            </div>
-                                            <!--end::Actions-->
-                                        </div>
-                                        <!--end::Content-->
-                                    </div>
-                                    <!--end::Menu 1-->
-                                    <!--end::Filter-->
+                                    <!--begin::Menu 1-->
+
                                     <!--begin::Export-->
                                     <button type="button" class="btn btn-light-primary me-3" data-bs-toggle="modal"
                                         data-bs-target="#kt_modal_export_users">
@@ -280,12 +101,12 @@
                                     </button>
                                     <!--end::Export-->
                                     <!--begin::Add user-->
-                                    <a href={{  route('student.add')}}>
+                                    <a href={{  route('bookadd')}}>
                                         <button type="button" class="btn btn-primary"
                                             >
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
 
-                                            <!--end::Svg Icon-->Add User
+                                            <!--end::Svg Icon-->Add Books
                                         </button>
                                     </a>
                                     <!--end::Add user-->
@@ -310,7 +131,7 @@
                                             <!--begin::Modal header-->
                                             <div class="modal-header">
                                                 <!--begin::Modal title-->
-                                                <h2 class="fw-bold">Export Users</h2>
+                                                <h2 class="fw-bold">Export Books</h2>
                                                 <!--end::Modal title-->
                                                 <!--begin::Close-->
                                                 <div class="btn btn-icon btn-sm btn-active-icon-primary"
@@ -332,66 +153,7 @@
                                                 <!--end::Close-->
                                             </div>
                                             <!--end::Modal header-->
-                                            <!--begin::Modal body-->
-                                            <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
-                                                <!--begin::Form-->
-                                                <form id="kt_modal_export_users_form" class="form" action="#">
-                                                    <!--begin::Input group-->
-                                                    <div class="fv-row mb-10">
-                                                        <!--begin::Label-->
-                                                        <label class="fs-6 fw-semibold form-label mb-2">Select
-                                                            Roles:</label>
-                                                        <!--end::Label-->
-                                                        <!--begin::Input-->
-                                                        <select name="role" data-control="select2"
-                                                            data-placeholder="Select a role" data-hide-search="true"
-                                                            class="form-select form-select-solid fw-bold">
-                                                            <option></option>
-                                                            <option value="Administrator">Administrator</option>
-                                                            <option value="Analyst">Analyst</option>
-                                                            <option value="Developer">Developer</option>
-                                                            <option value="Support">Support</option>
-                                                            <option value="Trial">Trial</option>
-                                                        </select>
-                                                        <!--end::Input-->
-                                                    </div>
-                                                    <!--end::Input group-->
-                                                    <!--begin::Input group-->
-                                                    <div class="fv-row mb-10">
-                                                        <!--begin::Label-->
-                                                        <label class="required fs-6 fw-semibold form-label mb-2">Select
-                                                            Export Format:</label>
-                                                        <!--end::Label-->
-                                                        <!--begin::Input-->
-                                                        <select name="format" data-control="select2"
-                                                            data-placeholder="Select a format" data-hide-search="true"
-                                                            class="form-select form-select-solid fw-bold">
-                                                            <option></option>
-                                                            <option value="excel">Excel</option>
-                                                            <option value="pdf">PDF</option>
-                                                            <option value="cvs">CVS</option>
-                                                            <option value="zip">ZIP</option>
-                                                        </select>
-                                                        <!--end::Input-->
-                                                    </div>
-                                                    <!--end::Input group-->
-                                                    <!--begin::Actions-->
-                                                    <div class="text-center">
-                                                        <button type="reset" class="btn btn-light me-3"
-                                                            data-kt-users-modal-action="cancel">Discard</button>
-                                                        <button type="submit" class="btn btn-primary"
-                                                            data-kt-users-modal-action="submit">
-                                                            <span class="indicator-label">Submit</span>
-                                                            <span class="indicator-progress">Please wait...
-                                                                <span
-                                                                    class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                                        </button>
-                                                    </div>
-                                                    <!--end::Actions-->
-                                                </form>
-                                                <!--end::Form-->
-                                            </div>
-                                            <!--end::Modal body-->
+
                                         </div>
                                         <!--end::Modal content-->
                                     </div>
@@ -433,7 +195,7 @@
                                             <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
                                                 <!--begin::Form-->
                                                 <form method="post" id="kt_modal_add_user_form" class="form"
-                                                    action="{{ route('book.add') }}">
+                                                    action="{{ route('bookadd') }}">
                                                     @csrf
                                                     <!--begin::Scroll-->
                                                     <div class="d-flex flex-column scroll-y me-n7 pe-7"
@@ -443,99 +205,8 @@
                                                         data-kt-scroll-dependencies="#kt_modal_add_user_header"
                                                         data-kt-scroll-wrappers="#kt_modal_add_user_scroll"
                                                         data-kt-scroll-offset="300px">
-                                                        <!--begin::Input group-->
-                                                        <!--begin::Input group-->
-                                                        <div class="fv-row mb-7">
-                                                            <!--begin::Label-->
-                                                            <label class="required fw-semibold fs-6 mb-2">Book Name</label>
-                                                            <!--end::Label-->
-                                                            <!--begin::Input-->
-                                                            <input type="text" name="name"
-                                                            class="form-control form-control-solid mb-3 mb-lg-0"
-                                                            placeholder="name">
-                                                            <!--end::Input-->
-                                                        </div>
-                                                        <!--end::Input group-->
-                                                        <div class="fv-row mb-7">
-                                                            <!--begin::Label-->
-                                                            <label
-                                                                class="required fw-semibold fs-6 mb-2">Author</label>
-                                                            <!--end::Label-->
-                                                            <!--begin::Input-->
-                                                            {{-- to change --}}
-                                                            <input type="text" name="Author"
-                                                                class="form-control form-control-solid mb-3 mb-lg-0">
-                                                            <!--end::Input-->
-                                                        </div>
-                                                        <!--end::Input group-->
-                                                        <!--begin::Input group-->
-                                                        <div class="fv-row mb-7">
-                                                            <!--begin::Label-->
-                                                            <label class="required fw-semibold fs-6 mb-2">Distributor</label>
-                                                            <!--end::Label-->
-                                                            <!--begin::Input-->
-                                                            <input type="text" name="distributor"
-                                                                class="form-control form-control-solid mb-3 mb-lg-0"
-                                                                placeholder="example@domain.com" />
-                                                            <!--end::Input-->
-                                                        </div>
-                                                        <!--end::Input group-->
-
-                                                        <div class="fv-row mb-7">
-                                                            <!--begin::Label-->
-                                                            <label class="required fw-semibold fs-6 mb-2">Publisher</label>
-                                                            <!--end::Label-->
-                                                            <!--begin::Input-->
-                                                            <input type="text" name="publisher"
-                                                                class="form-control form-control-solid mb-3 mb-lg-0" />
-                                                            <!--end::Input-->
-
-                                                            <div class="fv-row mb-7">
-                                                                <!--begin::Label-->
-                                                                <label class="required fw-semibold fs-6 mb-2">Isbn no.</label>
-                                                                <!--end::Label-->
-                                                                <!--begin::Input-->
-                                                                <input type="text" name="Isbn_number"
-                                                                    class="form-control form-control-solid mb-3 mb-lg-0">
-                                                                <!--end::Input-->
-
-                                                                <div class="fv-row mb-7">
-                                                                    <!--begin::Label-->
-                                                                    <label
-                                                                        class="required fw-semibold fs-6 mb-2">Image</label>
-                                                                    <!--end::Label-->
-                                                                    <!--begin::Input-->
-                                                                    <input type="text" name="img"
-                                                                        class="form-control form-control-solid mb-3 mb-lg-0">
-                                                                    <!--end::Input-->
 
 
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                            <!--begin::Input group-->
-
-                                                            <!--end::Input group-->
-                                                        </div>
-                                                        <!--end::Scroll-->
-                                                        <!--begin::Actions-->
-                                                        <div class="text-center pt-15">
-                                                            <button type="reset" class="btn btn-light me-3"
-                                                                data-kt-users-modal-action="cancel">Discard</button>
-                                                            <button type="submit" class="btn btn-primary"
-                                                                data-kt-users-modal-action="submit" value="submit">
-                                                                <span class="indicator-label">Submit</span>
-                                                                <span class="indicator-progress">Please wait...
-                                                                    <span
-                                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                                            </button>
-                                                        </div>
-                                                        <!--end::Actions-->
                                                 </form>
                                                 <!--end::Form-->
                                             </div>
@@ -579,19 +250,19 @@
                                 <!--begin::Table body-->
                                 <tbody class="text-gray-600 fw-semibold">
                                     <!--begin::Table row-->
-                                    @foreach($books as $kitab)
+                                    @foreach($kitab as $kitabs)
                                     <tr>
                                     <td>
-                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                           <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                 <input class="form-check-input" type="checkbox" value="1" />
                                             </div>
                                         </td>
-                                        <td>{{$kitab->name}}</td>
-                                        <td>{{$kitab->author}}</td>
-                                        <td>{{$kitab->publisher}}</td>
-                                        <td>{{$kitab->distributor}}</td>
-                                        <td>{{$kitab->Isbn_number}}</td>
-                                        <td>{{$kitab->image}}</td>
+                                        <td>{{$kitabs->name}}</td>
+                                        <td>{{$kitabs->author}}</td>
+                                        <td>{{$kitabs->publisher}}</td>
+                                        <td>{{$kitabs->distributor}}</td>
+                                        <td>{{$kitabs->Isbn_number}}</td>
+                                        <td><img src="{{asset('uploads/book/'.$kitabs->image)}}" width="40px" height="40px" alt="image"></td>
                                     </tr>
                                     @endforeach
 

@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::group(['middleware'=>"web"],function(){
+//     Route::get('/', [AuthController::class,'index'])->name('auth.login');
+//     Route::post('/user/save', [AuthController::class,'save'])->name('user.save');
+//     Route::get('/dashboard', [HomeController::class,'index'])->name('dashboard');
+// });
+
+
+
 // login
 Route::get('/', [AuthController::class,'index'])->name('auth.login');
 Route::post('/user/save', [AuthController::class,'save'])->name('user.save');
@@ -35,5 +43,5 @@ Route::post('/student/save', [StudentController::class, 'saveStudent'])->name('s
 Route::get('/book/list',[bookController::class, 'index'])->name('book.index');
 Route::get('/addbook',[bookController::class, 'addBook'])->name('book.addBook');
 
-Route::post('book/formdata',[bookController::class,'formdata'])->name('book.add');
+Route::post('/addbook',[bookController::class,'formdata'])->name('bookadd');
 

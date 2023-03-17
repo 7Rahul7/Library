@@ -10,5 +10,7 @@ class Book extends Model
     use HasFactory;
     protected $guarded =[];
     protected $table ='books';
-    public $timestamps =false;
+
+    protected $fillable=['name','author','publisher','distributor','Isbn_number','image'];
+    
 }

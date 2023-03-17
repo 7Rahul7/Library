@@ -38,8 +38,9 @@
                                 <!--begin::Col-->
                                 <div class="col-md-12 pe-lg-10">
                                     <!--begin::Form-->
-                                    <form action="{{ route('book.add') }}" class="form mb-15" method="post"
-                                        id="kt_contact_form">
+                                    <form action="{{ route('bookadd') }}" class="form mb-15" method="post"
+                                        id="kt_contact_form" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
                                         @if ($errors->any())
                                             <div class="alert alert-danger">
                                                 <ul>
@@ -49,7 +50,7 @@
                                                 </ul>
                                             </div>
                                         @endif
-                                        @csrf
+
                                         <!--begin::Input group-->
                                         <div class="row mb-5">
                                             <!--begin::Col-->
@@ -109,8 +110,8 @@
                                                 <label class="fs-5 fw-semibold mb-2">Image</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" ssclass="form-control form-control-solid"
-                                                    name="img" />
+                                                <input type="file" ssclass="form-control form-control-solid"
+                                                    name="image" />
                                                 <!--end::Input-->
                                             </div>
                                             <!--end::Input group-->
